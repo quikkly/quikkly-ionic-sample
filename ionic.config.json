@@ -1,0 +1,8 @@
+{
+  "name": "quikkly-test",
+  "app_id": "b973d1f3",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
