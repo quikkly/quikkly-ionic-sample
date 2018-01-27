@@ -5,13 +5,22 @@
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
+  <h2>Welcome to Quikkly Test!</h2>
   <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
+    This is a basic Ionic app to test the integration of the 
+    quikkly SDK. Press the SCAN button to open the Quikkly 
+    scanner. Simply scan a code and the resolved values
+    will be displayed.
   </p>
+  <h3>TAGS</h3>
+  <ul>
+      <li *ngIf="!tags.length">Scan some tags !</li>
+      <li *ngFor="let tag of tags">
+        {{ tag }}
+      </li>
+  </ul>
   <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
+    <button ion-button icon-start (click)="goQuikkly()">
+      <ion-icon name="star"></ion-icon>SCAN</button>
   </p>
 </ion-content>
