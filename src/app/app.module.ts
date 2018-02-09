@@ -12,7 +12,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Device } from '@ionic-native/device';
 
-import { Quikkly } from './quikkly'
+import { QuikklyPlugin } from './quikkly-plugin'
 
 @NgModule({
   declarations: [
@@ -38,7 +38,7 @@ import { Quikkly } from './quikkly'
     StatusBar,
     SplashScreen,
     Device,
-    Quikkly,
+    QuikklyPlugin,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

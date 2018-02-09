@@ -2,14 +2,14 @@ import { Injectable } from '@angular/core';
 import { Cordova, Plugin, IonicNativePlugin } from '@ionic-native/core';
 
 @Plugin({
-    pluginName: 'Quikkly',
+    pluginName: 'QuikklyPlugin',
     plugin: 'cordova-plugin-quikkly',
     pluginRef: 'cordova.plugins.quikkly',
-    platforms: ['Android']
+    platforms: ['Android','iOS']
   })
   @Injectable()
-  export class Quikkly extends IonicNativePlugin {
+  export class QuikklyPlugin extends IonicNativePlugin {
     @Cordova()
-      openScanner(): Promise<string[]> {return ;}
+      openScanner(apiKey: String): Promise<string[]> {return ;}
   }
   
