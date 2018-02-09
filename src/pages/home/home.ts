@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Device } from '@ionic-native/device';
 
-import { QuikklyPlugin } from '../../app/quikkly-plugin';
+import { QuikklyPlugin } from '@ionic-native/quikkly-plugin';
 
 @Component({
   selector: 'page-home',
