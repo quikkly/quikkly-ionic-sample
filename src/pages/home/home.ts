@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController,
+         AlertController } from 'ionic-angular';
 import { Device } from '@ionic-native/device';
 
 import { QuikklyPlugin } from '@ionic-native/quikkly-plugin';
@@ -11,16 +12,27 @@ import { QuikklyPlugin } from '@ionic-native/quikkly-plugin';
 export class HomePage {
 
   tags: string[] = [];
-  constructor(public navCtrl: NavController, private quikkly: QuikklyPlugin) {
+
+  constructor(public navCtrl: NavController, private quikkly: QuikklyPlugin, private alert: AlertController) {
   }
 
   goQuikkly() {
-    this.quikkly.openScanner("kCPeTZnGsmo90ZAu9q2rlXB94EAbUC2fvK7Ur95tLHsKFIYhYdt8Qrl80iVy").then((value) => {
-      console.log("success handler");
+    this.quikkly.openScanner("YOUR API KEY GOES HERE").then((value) => {
+      console.log(`openScanner returned: ${value}`);
       value.forEach((iter) => this.tags.push(iter));
     }).catch((err) => {
-      console.log("error handler");
-      console.log(err);
+      console.log(`openScanner failed: ${err}`);
+      this.showAlert("Oooops!", err);
     });
+  }
+
+  private showAlert(title: string, subTitle: string) {
+    let alert = this.alert.create({
+      title: title,
+      subTitle: subTitle,
+      buttons: ['Ok']
+    });
+
+    alert.present();
   }
 }
