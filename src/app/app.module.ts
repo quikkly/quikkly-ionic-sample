@@ -11,7 +11,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { QuikklyPlugin } from '@ionic-native/quikkly-plugin'
+import { QuikklyPlugin } from '@quikkly/ionic'
 
 @NgModule({
   declarations: [
