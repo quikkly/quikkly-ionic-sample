@@ -10,9 +10,8 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { Device } from '@ionic-native/device';
 
-import { Quikkly } from './quikkly'
+import { QuikklyPlugin } from '@quikkly/ionic'
 
 @NgModule({
   declarations: [
@@ -37,8 +36,7 @@ import { Quikkly } from './quikkly'
   providers: [
     StatusBar,
     SplashScreen,
-    Device,
-    Quikkly,
+    QuikklyPlugin,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
