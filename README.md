@@ -131,4 +131,4 @@ And finally our view which is */src/pages/home/home.html*.
 
 If you run the sample open the scanner and scan this image the value returned is **123456**.
 
-![](123456.svg)
+<img src="123456.svg"  width="190">
