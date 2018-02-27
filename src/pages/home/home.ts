@@ -16,7 +16,7 @@ export class HomePage {
   }
 
   goQuikkly() {
-    this.quikkly.openScanner("YOUR API KEY GOES HERE").then((value) => {
+    this.quikkly.openScanner().then((value) => {
       console.log(`openScanner returned: ${value}`);
       value.forEach((iter) => this.tags.push(iter));
     }).catch((err) => {

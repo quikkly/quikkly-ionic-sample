@@ -85,9 +85,9 @@
     <allow-navigation href="http://192.168.58.1:8100" />
     <allow-navigation href="http://192.168.0.117:8100" />
     <plugin name="cordova-plugin-statusbar" spec="^2.4.1" />
-    <plugin name="cordova-plugin-quikkly" spec="../cordova-plugin-quikkly">
-        <variable name="CAMERA_USAGE_DESCRIPTION" value="This app needs camera access" />
-    </plugin>
     <engine name="android" spec="7.0.0" />
     <engine name="ios" spec="4.5.4" />
+    <plugin name="cordova-plugin-quikkly" spec="^1.0.0">
+        <variable name="CAMERA_USAGE_DESCRIPTION" value="This app needs camera access" />
+    </plugin>
 </widget>
