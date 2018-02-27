@@ -27,7 +27,7 @@ First you need to load the module by specifing it in your */src/app/app.module.t
 
 
 ```typescript
-import { QuikklyPlugin } from '@quikkly/ionic'  :point-left:
+import { QuikklyPlugin } from '@quikkly/ionic'  :point_left:
 
 @NgModule({
   declarations: [
